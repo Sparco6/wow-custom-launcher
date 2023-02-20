@@ -13,7 +13,7 @@
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <ApplicationIcon>wow_app.ico</ApplicationIcon>
     <AssemblyName>$(MSBuildProjectName)</AssemblyName>
-    <IsPublishable>False</IsPublishable>
+    <IsPublishable>True</IsPublishable>
     <Product>Launcher</Product>
     <Copyright>Games by Lance 2022</Copyright>
     <ApplicationManifest>app.manifest</ApplicationManifest>
