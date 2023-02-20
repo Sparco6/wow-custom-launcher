@@ -22,6 +22,9 @@ namespace WoWLauncher.Updater
         // Textfile containing version number of latest launcher (e.g 1.2) 
         private string m_UpdateVersionUri = "https://example.com/Patch/update.txt";
         private string m_ServerAddressUri = "https://example.com/Patch/realm.txt";
+
+        // Location of the realmlist ("Data/enUS/realmlist.txt", "realmlist.txt", ...)
+        private string m_RealmlistFileLocation = "realmlist.wtf";
         /*
          * HOW TO ORGANIZE YOUR PATCH SERVER
          * 
@@ -98,10 +101,10 @@ namespace WoWLauncher.Updater
             catch
             {
                 // No server file online, check if local file exists
-                if (File.Exists("Data/enUS/realmlist.wtf"))
+                if (File.Exists(m_RealmlistFileLocation))
                 {
                     // Read existing file and save it for this session
-                    string _realmd = File.ReadAllText("Data/enUS/realmlist.wtf");
+                    string _realmd = File.ReadAllText(m_RealmlistFileLocation);
                     if (_realmd.Length > 0)
                     {
                         string[] _realmParts = _realmd.Split(' ');
@@ -109,7 +112,7 @@ namespace WoWLauncher.Updater
                     }
                 }
                 else // create new dummy file if nothing else exists. Silly.
-                    File.WriteAllText("Data/enUS/realmlist.wtf", $"set realmlist {m_RealmAddress}");
+                    File.WriteAllText(m_RealmlistFileLocation, $"set realmlist {m_RealmAddress}");
 
                 return;
             }
@@ -140,7 +143,7 @@ namespace WoWLauncher.Updater
         /// <param name="e"></param>
         private void realm_DonePatchListAsync(object sender, DownloadStringCompletedEventArgs e)
         {
-            File.WriteAllText("Data/enUS/realmlist.wtf", $"set realmlist {e.Result}");
+            File.WriteAllText(m_RealmlistFileLocation, $"set realmlist {e.Result}");
             if (File.Exists("Cache/L/realm.txt"))
                 File.Delete("Cache/L/realm.txt");
         }
