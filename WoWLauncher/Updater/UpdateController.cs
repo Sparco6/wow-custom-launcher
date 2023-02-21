@@ -20,8 +20,8 @@ namespace WoWLauncher.Updater
         private bool m_NeedsUpdate;
 
         // Textfile containing version number of latest launcher (e.g 1.2) 
-        private string m_UpdateVersionUri = "https://masterwow.cz/Patch/update.txt";
-        private string m_ServerAddressUri = "https://masterwow.cz/Patch/realm.txt";
+        private string m_UpdateVersionUri = "https://master-wow.eu/Patch/update.txt";
+        private string m_ServerAddressUri = "https://master-wow.eu/Patch/realm.txt";
 
         // Location of the realmlist ("Data/enUS/realmlist.txt", "realmlist.txt", ...)
         private string m_RealmlistFileLocation = "realmlist.wtf";
