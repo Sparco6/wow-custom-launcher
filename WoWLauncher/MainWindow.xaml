@@ -118,7 +118,7 @@
 
         <Image x:Name="serverStatusIcon" HorizontalAlignment="Left" Height="20" Margin="80,480,0,0" VerticalAlignment="Top" Width="22" Source="/WoWLauncher;component/images/Indicator-Yellow.PNG" Stretch="None"/>
         <Label x:Name="serverStatus" Content="Checking server status..." HorizontalAlignment="Left" Margin="99,473,0,0" VerticalAlignment="Top" Width="249" FontSize="20" FontWeight="Bold" Foreground="White" FontFamily="Californian FB"/>
-        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="42" Margin="80,517,0,0" VerticalAlignment="Top" Width="537" Foreground="#FF06A4B0" BorderThickness="0,0,0,0" Background="#FF192D33"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="42" Margin="80,517,0,0" VerticalAlignment="Top" Width="537" Foreground="#FF629E1C" BorderThickness="0,0,0,0" Background="#FF19331C"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="60,498,0,0" VerticalAlignment="Top" Width="575" Source="/WoWLauncher;component/images/PatchBar.png"/>
 
         <RichTextBox Margin="99,278,100,187" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" IsReadOnly="True" SelectionTextBrush="{x:Null}" Focusable="False" AllowDrop="False" FontFamily="Californian FB" IsDocumentEnabled="True" Cursor="Arrow" >
