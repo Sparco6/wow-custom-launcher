@@ -27,6 +27,7 @@ namespace WoWLauncher
         // update controllers
         private PatchController m_Patcher;
         private UpdateController m_Updater;
+        private ServerCheck m_ServerCheck;
 
         public MainWindow()
         {
@@ -35,6 +36,7 @@ namespace WoWLauncher
 
             m_Updater = new UpdateController(this);
             m_Patcher = new PatchController(this);
+            m_ServerCheck = new ServerCheck(this, ref m_Updater);
 
             // Check launcher update
             m_Updater.CheckForUpdates();
