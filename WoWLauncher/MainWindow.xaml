@@ -21,7 +21,7 @@
                     Background="{TemplateBinding Panel.Background}"
                     Name="border"
                     SnapsToDevicePixels="True">
-                        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Name="PART_ContentHost" Focusable="False" />
+                            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Name="PART_ContentHost" Focusable="False" />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="UIElement.IsEnabled" Value="False">
@@ -53,21 +53,21 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" TargetName="border">
                                     <Setter.Value>
-                                        <ImageBrush ImageSource="/WoWLauncher;component/images/Button-Hover.png" Stretch="None" />
+                                        <ImageBrush ImageSource="/WoWLauncher;component/images/Button-Hover.png" Stretch="Fill" />
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter Property="Background" TargetName="border">
                                     <Setter.Value>
-                                        <ImageBrush ImageSource="/WoWLauncher;component/images/Button-Click.png" Stretch="None" />
+                                        <ImageBrush ImageSource="/WoWLauncher;component/images/Button-Click.png" Stretch="Fill" />
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Background" TargetName="border">
                                     <Setter.Value>
-                                        <ImageBrush ImageSource="/WoWLauncher;component/images/Button-Disabled.png" Stretch="None" />
+                                        <ImageBrush ImageSource="/WoWLauncher;component/images/Button-Disabled.png" Stretch="Fill" />
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -112,7 +112,7 @@
         <Image MouseDown="Window_MouseDown" HorizontalAlignment="Left" Height="639" VerticalAlignment="Top" Width="867" Source="/WoWLauncher;component/images/Window.png" Stretch="None" Margin="1,0,0,0" />
         <Button x:Name="playBtn" Style="{DynamicResource PlayBtn}"  Content="Play" HorizontalAlignment="Left" Margin="635,507,0,0" VerticalAlignment="Top" Height="62" Width="151" IsDefault="True" Foreground="White" BorderBrush="{x:Null}" FontSize="20" FontFamily="Californian FB" FontStretch="Normal" FontWeight="Bold" Click="playBtn_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/WoWLauncher;component/images/Button.png" Stretch="None"/>
+                <ImageBrush ImageSource="/WoWLauncher;component/images/Button.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
 
@@ -144,6 +144,11 @@
         <Button Style="{DynamicResource CloseBtn}" HorizontalAlignment="Left" Margin="782,136,0,0" VerticalAlignment="Top" Height="42" Width="43" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="Close_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/WoWLauncher;component/images/Close.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="clearCacheBtn" Style="{DynamicResource PlayBtn}"  Content="Clear cache" HorizontalAlignment="Left" Margin="635,569,0,0" VerticalAlignment="Top" Height="32" Width="151" IsDefault="True" Foreground="White" BorderBrush="{x:Null}" FontFamily="Californian FB" FontStretch="Normal" Click="clearCacheBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/images/Button.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
     </Grid>

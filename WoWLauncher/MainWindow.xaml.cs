@@ -85,5 +85,21 @@ namespace WoWLauncher
                 Application.Current.Shutdown(); // close launcher, maybe make this an option?
             }
         }
+
+        private void clearCacheBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                clearCacheBtn.IsEnabled = false;
+                clearCacheBtn.Content = "Clearing...";
+            });
+
+            if(Directory.Exists("Cache/"))
+            {
+                Directory.Delete("Cache/", true);
+            }
+
+            clearCacheBtn.Content = "Cleared";
+        }
     }
 }
