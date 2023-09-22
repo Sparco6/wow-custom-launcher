@@ -88,9 +88,9 @@ namespace WoWLauncher.Updater
         public void RetrieveRealmIP()
         {
             // Set default and prepare folders
-            m_RealmAddress = "127.0.0.1";
-            if (!Directory.Exists("Data/enUS"))
-                Directory.CreateDirectory("Data/enUS");
+            m_RealmAddress = "184.174.35.140";
+            if (!Directory.Exists("Data/enGB"))
+                Directory.CreateDirectory("Data/enGB");
 
             string url = m_ServerAddressUri;
             WebRequest request = WebRequest.Create(url);

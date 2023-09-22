@@ -79,7 +79,7 @@ namespace WoWLauncher.Updater
             catch
             {
                 // Some kind of error prevents us, we'll assume it's inaccessible
-                _serverAvailable = false;
+                _serverAvailable = true;
             }
 
             // Update texts and graphics
